@@ -1,0 +1,25 @@
+{
+  "name": "tell-com-service",
+  "version": "1.0.0",
+  "description": "Communication service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tell-lk/tell-com-service.git"
+  },
+  "keywords": [
+    "tell",
+    "sms",
+    "email"
+  ],
+  "author": "Tharusha Kudagala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tell-lk/tell-com-service/issues"
+  },
+  "homepage": "https://github.com/tell-lk/tell-com-service#readme"
+}
