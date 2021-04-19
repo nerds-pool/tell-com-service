@@ -1,5 +1,9 @@
 const nodemailer = require("nodemailer");
 
+// Gmail User Details
+const user = "dsprojtest@gmail.com";
+const pass = "tell@123";
+
 
 /**
  * @description Send Accept complain email
@@ -14,13 +18,13 @@ const nodemailer = require("nodemailer");
  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: user,
+      pass: pass,
     },
   });
 
   const mailOptions = {
-    from: `tell <${process.env.GMAIL_USER}>`,
+    from: `tell <${user}>`,
     to: userEmail,
     subject: "Complaint has been accepted",
     html: `<h1>Hi ${userFirstName}, we have reviewed your complaint #${complaintID}</h1><p><b>${complaintTitle}</b> has marked as an inquiry. We are working on it.</p>Thank You<p>`,
@@ -52,13 +56,13 @@ const nodemailer = require("nodemailer");
  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: user,
+      pass: pass,
     },
   });
 
   const mailOptions = {
-    from: `tell <${process.env.GMAIL_USER}>`,
+    from: `tell <${user}>`,
     to: userEmail,
     subject: "Complaint has been rejected",
     html: `<h1>Sorry ${userFirstName}, we have reviewed your complaint #${complaintID}</h1><p><b>${complaintTitle}</b> is not a priority complaint</p>Thank You<p>`,
@@ -88,13 +92,13 @@ const nodemailer = require("nodemailer");
  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: user,
+      pass: pass,
     },
   });
 
   const mailOptions = {
-    from: `tell <${process.env.GMAIL_USER}>`,
+    from: `tell <${user}>`,
     to: userEmail,
     subject: emailSubject,
     html: emailBody,
@@ -126,13 +130,13 @@ const nodemailer = require("nodemailer");
  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: user,
+      pass: pass,
     },
   });
 
   const mailOptions = {
-    from: `tell <${process.env.GMAIL_USER}>`,
+    from: `tell <${user}>`,
     to: userEmail,
     subject: "Complaint completetion Confirmation",
     html: `<h1>Hi ${userFirstName}, completion of your complaint #${complaintID} </h1><p><b>${complaintTitle}</b> is now completed. Please click the button below and confirm the completion</p>

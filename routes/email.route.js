@@ -16,8 +16,8 @@ const {
  * @param {String} complaintID complaint id
  * @param {String} complaintTitle complaint title
  */
- router.post("/accept/:userEmail/:userFirstName/:complaintID/:complaintTitle", SendAcceptMailController);
-
+ router.post("/accept", SendAcceptMailController);
+//:userEmail/:userFirstName/:complaintID/:complaintTitle
 /**
  * @description Send Email : Notify reject the complaint
  * @name post/email/reject
@@ -26,8 +26,8 @@ const {
  * @param {String} complaintID
  * @param {String} complaintTitle
  */
- router.post("/reject/:userEmail/:userFirstName/:complaintID/:complaintTitle", SendRejectMailController);
-
+ router.post("/reject", SendRejectMailController);
+///:userEmail/:userFirstName/:complaintID/:complaintTitle
 /**
  * @description Send Email : Any
  * @name post/email/send/
@@ -35,8 +35,8 @@ const {
  * @param {String} emailSubject
  * @param {String} emailBody
  */
- router.post("/send/:userEmail/:emailSubject/:emailBody", SendAnyEmailController);
-
+ router.post("/send", SendAnyEmailController);
+///:userEmail/:emailSubject/:emailBody
 /**
  * @description Send Email : Completion confirmation
  * @name post/email/complete/
@@ -46,6 +46,6 @@ const {
  * @param {String} complaintTitle
  * @param {String} link confirmation link
  */
- router.post("/complete/:userEmail/:userFirstName/:complaintID/:complaintTitle/:link", SendCompleteEConfirmationController);
-
+ router.post("/complete", SendCompleteEConfirmationController);
+///:userEmail/:userFirstName/:complaintID/:complaintTitle/:link
  module.exports = router;
